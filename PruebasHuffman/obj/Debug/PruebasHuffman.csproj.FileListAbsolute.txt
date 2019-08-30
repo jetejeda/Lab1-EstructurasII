@@ -1,0 +1,6 @@
+C:\Users\José\source\repos\PruebasHuffman\PruebasHuffman\bin\Debug\PruebasHuffman.exe
+C:\Users\José\source\repos\PruebasHuffman\PruebasHuffman\bin\Debug\PruebasHuffman.pdb
+C:\Users\José\source\repos\PruebasHuffman\PruebasHuffman\obj\Debug\PruebasHuffman.csprojAssemblyReference.cache
+C:\Users\José\source\repos\PruebasHuffman\PruebasHuffman\obj\Debug\PruebasHuffman.csproj.CoreCompileInputs.cache
+C:\Users\José\source\repos\PruebasHuffman\PruebasHuffman\obj\Debug\PruebasHuffman.exe
+C:\Users\José\source\repos\PruebasHuffman\PruebasHuffman\obj\Debug\PruebasHuffman.pdb
