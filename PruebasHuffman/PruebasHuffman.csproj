@@ -39,6 +39,7 @@
   <ItemGroup>
     <Compile Include="ComponentesDeCadaNodo.cs" />
     <Compile Include="ComponentesLecturaInicial.cs" />
+    <Compile Include="Huffman.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
