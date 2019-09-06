@@ -7,6 +7,7 @@ namespace PruebasHuffman
     public class Huffman
     {
         private ComponentesDeCadaNodo raiz;
+        private Dictionary<string, char> diccionarioDePrefijos = new Dictionary<string, char>();
         public void EnsambladoDeHuffman(List<ComponentesDeCadaNodo> ListaDeCaracteres)
         {
 
@@ -65,6 +66,7 @@ namespace PruebasHuffman
             else
             {
                 NodoActual.datosDelCaracter.codigoPrefijo = codigoPrefijo;
+                diccionarioDePrefijos.Add(NodoActual.datosDelCaracter.codigoPrefijo, NodoActual.datosDelCaracter.caracter);
             }//cout << nNodo->sInformacion.iNumero << "-";
 
         }

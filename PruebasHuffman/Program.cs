@@ -8,53 +8,41 @@ namespace PruebasHuffman
     {
         static void Main(string[] args)
         {
-            //const int buffersLength = 1000;
-            //using (var stream = new FileStream("", FileMode.Open))
-            //{
-            //    using (var reader = new BinaryReader(stream))
-            //    {
-            //        using (var writeStream = new FileStream("", FileMode.Open))
-            //        {
-            //            using (var writer = new BinaryWriter(writeStream))
-            //            {
-            //                var byteBurffer = new byte[buffersLength];
-            //                while (reader.BaseStream.Position != reader.BaseStream.Length)
-            //                {
-            //                    byteBurffer = reader.ReadBytes(buffersLength);
-            //                    writer.Write(byteBurffer);
-            //                }
-            //            }
-            //        }
-            //    }
-            //}
-
-            Console.WriteLine("Ingrese el texto que quiera comprimir");
-            string textoIngresado;
-            textoIngresado = Console.ReadLine();
-            int contador = 0;
+            const int buffersLength = 100;
+            var contador = 0;
+            var CantidadTotalDeCaracteres = 0;
             List<ComponentesLecturaInicial> listaDeCaracteres = new List<ComponentesLecturaInicial>();
-            int CantidadTotalDeCaracteres = textoIngresado.Length;
-            //tambien cuando ya sean archivos esta se va a tener que aumentar por cada linea
-            while (contador < textoIngresado.Length)
+            using (var stream = new FileStream("PruebaLecturas.txt", FileMode.Open))
             {
-                //para que recorra caracter por caracter del string, cuando ya sean archivos tiene que ser anidado porque
-                //tiene que hacer esto por cada linea del archivo
-                ComponentesLecturaInicial caracterParaLista = new ComponentesLecturaInicial();
-                caracterParaLista = listaDeCaracteres.Find(x => x.caracter == textoIngresado[contador]);
-                if (caracterParaLista == null)
+                using (var reader = new BinaryReader(stream))
                 {
-                    caracterParaLista = new ComponentesLecturaInicial();
-                    caracterParaLista.caracter = textoIngresado[contador];
-                    caracterParaLista.frecuencia = 1;
-                    listaDeCaracteres.Add(caracterParaLista);
-                }
-                else
-                {
-                    caracterParaLista.frecuencia++;
-                }
-                contador++;
-            }
+                    CantidadTotalDeCaracteres = Convert.ToInt32(reader.BaseStream.Length);
+                    var byteBurffer = new Char[buffersLength];
+                    while (reader.BaseStream.Position != reader.BaseStream.Length)
+                    {
+                        byteBurffer = reader.ReadChars(buffersLength);
+                        
+                        while (contador < byteBurffer.Length)
+                        {
+                            ComponentesLecturaInicial caracterParaLista = new ComponentesLecturaInicial();
+                            caracterParaLista = listaDeCaracteres.Find(x => x.caracter == byteBurffer[contador]);
+                            if (caracterParaLista == null)
+                            {
+                                caracterParaLista = new ComponentesLecturaInicial();
+                                caracterParaLista.caracter = byteBurffer[contador];
+                                caracterParaLista.frecuencia = 1;
+                                listaDeCaracteres.Add(caracterParaLista);
+                            }
+                            else
+                            {
+                                caracterParaLista.frecuencia++;
+                            }
+                            contador++;
+                        }
 
+                    }
+                }
+            }
             //2 opciones para el calculo de las probabilidades....
             //o lo vamos calculando por cada vez que entre a cada condicion del ciclo que tenemos arriba o
             //cuando ya esten todos los datos en la lista recorrer cada posicion de la lista para sacar la probabilidad
@@ -81,6 +69,7 @@ namespace PruebasHuffman
             algoritmoDeHuffman.EnsambladoDeHuffman(nodosParaHuffman);
             algoritmoDeHuffman.Prefijos();
             contador = 0;
+            
         }
 
 
