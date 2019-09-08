@@ -7,7 +7,7 @@ namespace PruebasHuffman
     public class Huffman
     {
         private ComponentesDeCadaNodo raiz;
-        private Dictionary<string, char> diccionarioDePrefijos = new Dictionary<string, char>();
+        private Dictionary<string, byte> diccionarioDePrefijos = new Dictionary<string, byte>();
         public void EnsambladoDeHuffman(List<ComponentesDeCadaNodo> ListaDeCaracteres)
         {
 
@@ -29,8 +29,6 @@ namespace PruebasHuffman
                 {
                     ListaDeCaracteres.Insert(nuevaPosicionNodoHuffamn, nuevoNodo);
                 }
-                
-                //Tengo que recorrer mi vector hasta encontrar la posicion exacta donde tiene que ir
 
             }
             raiz = ListaDeCaracteres[0];
@@ -56,6 +54,7 @@ namespace PruebasHuffman
         {
             asignacionDeCodigoPrefijo(raiz, "");
         }
+
         void asignacionDeCodigoPrefijo(ComponentesDeCadaNodo NodoActual, string codigoPrefijo)
         {
             if (NodoActual.hijoDerecho != null && NodoActual.hijoIzquierdo !=null)
@@ -67,7 +66,7 @@ namespace PruebasHuffman
             {
                 NodoActual.datosDelCaracter.codigoPrefijo = codigoPrefijo;
                 diccionarioDePrefijos.Add(NodoActual.datosDelCaracter.codigoPrefijo, NodoActual.datosDelCaracter.caracter);
-            }//cout << nNodo->sInformacion.iNumero << "-";
+            }
 
         }
     }

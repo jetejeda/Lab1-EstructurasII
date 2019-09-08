@@ -8,7 +8,7 @@ namespace PruebasHuffman
     {
         public int frecuencia { get; set; }
         public double probabilidad { get; set; }
-        public char caracter { get; set; }
+        public byte caracter { get; set; }
         public string codigoPrefijo { get; set; }
     }
 }

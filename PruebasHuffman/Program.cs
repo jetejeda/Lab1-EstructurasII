@@ -17,11 +17,10 @@ namespace PruebasHuffman
                 using (var reader = new BinaryReader(stream))
                 {
                     CantidadTotalDeCaracteres = Convert.ToInt32(reader.BaseStream.Length);
-                    var byteBurffer = new Char[buffersLength];
+                    var byteBurffer = new byte[buffersLength];
                     while (reader.BaseStream.Position != reader.BaseStream.Length)
                     {
-                        byteBurffer = reader.ReadChars(buffersLength);
-                        
+                        byteBurffer = reader.ReadBytes(buffersLength);
                         while (contador < byteBurffer.Length)
                         {
                             ComponentesLecturaInicial caracterParaLista = new ComponentesLecturaInicial();
@@ -39,21 +38,16 @@ namespace PruebasHuffman
                             }
                             contador++;
                         }
-
                     }
                 }
             }
-            //2 opciones para el calculo de las probabilidades....
-            //o lo vamos calculando por cada vez que entre a cada condicion del ciclo que tenemos arriba o
-            //cuando ya esten todos los datos en la lista recorrer cada posicion de la lista para sacar la probabilidad
-            //yo preferiria el 2do la verdad porque se me hace mas optimo
             contador = 0;
             while (contador < listaDeCaracteres.Count)
             {
                 listaDeCaracteres[contador].probabilidad = Convert.ToDouble(listaDeCaracteres[contador].frecuencia) / Convert.ToDouble( CantidadTotalDeCaracteres);
                 contador++;
             }
-            //una vez leido y con las probabilidades ya se comienza el Huffman :v
+            //una vez leido y con las probabilidades ya se comienza el Huffman
             listaDeCaracteres.Sort((comp1, comp2) => comp1.probabilidad.CompareTo(comp2.probabilidad));
             var nodosParaHuffman = new List<ComponentesDeCadaNodo>();
             contador = 0;
@@ -69,11 +63,7 @@ namespace PruebasHuffman
             algoritmoDeHuffman.EnsambladoDeHuffman(nodosParaHuffman);
             algoritmoDeHuffman.Prefijos();
             contador = 0;
-            
         }
-
-
-
     }
 
 }
