@@ -4,3 +4,9 @@ C:\Users\José\source\repos\PruebasHuffman\PruebasHuffman\obj\Debug\PruebasHuffm
 C:\Users\José\source\repos\PruebasHuffman\PruebasHuffman\obj\Debug\PruebasHuffman.csproj.CoreCompileInputs.cache
 C:\Users\José\source\repos\PruebasHuffman\PruebasHuffman\obj\Debug\PruebasHuffman.exe
 C:\Users\José\source\repos\PruebasHuffman\PruebasHuffman\obj\Debug\PruebasHuffman.pdb
+D:\DOCUMENTOS\INGENIERIA\2do\2do Ciclo\EDII\Lab\Lab1\Consola\Lab1-EstructurasII-Huffman-Con-Prefijos\PruebasHuffman\bin\Debug\PruebasHuffman.exe
+D:\DOCUMENTOS\INGENIERIA\2do\2do Ciclo\EDII\Lab\Lab1\Consola\Lab1-EstructurasII-Huffman-Con-Prefijos\PruebasHuffman\bin\Debug\PruebasHuffman.pdb
+D:\DOCUMENTOS\INGENIERIA\2do\2do Ciclo\EDII\Lab\Lab1\Consola\Lab1-EstructurasII-Huffman-Con-Prefijos\PruebasHuffman\obj\Debug\PruebasHuffman.csprojAssemblyReference.cache
+D:\DOCUMENTOS\INGENIERIA\2do\2do Ciclo\EDII\Lab\Lab1\Consola\Lab1-EstructurasII-Huffman-Con-Prefijos\PruebasHuffman\obj\Debug\PruebasHuffman.csproj.CoreCompileInputs.cache
+D:\DOCUMENTOS\INGENIERIA\2do\2do Ciclo\EDII\Lab\Lab1\Consola\Lab1-EstructurasII-Huffman-Con-Prefijos\PruebasHuffman\obj\Debug\PruebasHuffman.exe
+D:\DOCUMENTOS\INGENIERIA\2do\2do Ciclo\EDII\Lab\Lab1\Consola\Lab1-EstructurasII-Huffman-Con-Prefijos\PruebasHuffman\obj\Debug\PruebasHuffman.pdb
